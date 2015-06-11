@@ -1,41 +1,49 @@
 import java.util.Scanner;
+import java.util.*;
 
-public class Students {
+class Students {
+	public String hoten;
+	public int tuoi,diem;
+}
+
+public class Hocsinh {
 
 	public static void main(String[] args) {
+		
 		Scanner doc=new Scanner(System.in);
 		
-		String[] a= new String[1000];
-		int[] b=new int[1000];
-		int[] c=new int[1000];
-		String tg="";
-		int n,temp;
+		Students[] a=new Students[1000];
+		Students tg;
+		int n;
 		
 		System.out.println("Input number of stundent: ");
 		n=doc.nextInt();
 		
 		System.out.println("Nhap ten, tuoi , diem cua tung nguoi: ");
 		
+		for(int i=0; i<n; i++) a[i]=new Students();
+		
 		for(int i=0; i<n; i++) {
 			doc.nextLine();
 			
-			a[i]=doc.next();	
-			b[i]=doc.nextInt();
-			c[i]=doc.nextInt();
+			a[i].hoten=doc.next();
+			a[i].tuoi=doc.nextInt();
+			a[i].diem=doc.nextInt();
+			
 		}
+		
+		for(int i=0; i<n; i++) System.out.println(a[i].hoten+" "+a[i].tuoi+" "+a[i].diem);
 		
 		for(int i=0; i<n-1; i++) 
 			for(int j=i+1; j<n; j++)
-				if (c[i]>c[j]) {
+				if (a[i].diem>a[j].diem) {
 					tg=a[i]; a[i]=a[j]; a[j]=tg;
-					temp=b[i]; b[i]=b[j]; b[j]=temp;
-					temp=c[i]; c[i]=c[j]; c[j]=temp;
 				}
 				
 		System.out.println("Danh sach theo thu tu diem: ");
 		
 		for(int i=0; i<n; i++) {
-			System.out.println(a[i]+" "+b[i]+" "+c[i]);
+			System.out.println(a[i].hoten+" "+a[i].tuoi+" "+a[i].diem);
 		}
 				
 	}
