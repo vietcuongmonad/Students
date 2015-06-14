@@ -1,19 +1,14 @@
 import java.util.Scanner;
 import java.util.*;
 
-class Students {
-	public String hoten;
-	public int tuoi,diem;
-}
-
-public class Hocsinh {
+public class Main {
 
 	public static void main(String[] args) {
 		
 		Scanner doc=new Scanner(System.in);
 		
-		Students[] a=new Students[1000];
-		Students tg;
+		Student[] a=new Student[1000];
+		Student tg;
 		int n;
 		
 		System.out.println("Input number of stundent: ");
@@ -21,9 +16,9 @@ public class Hocsinh {
 		
 		System.out.println("Nhap ten, tuoi , diem cua tung nguoi: ");
 		
-		for(int i=0; i<n; i++) a[i]=new Students();
+		for(int i=0; i<n; i++) a[i]=new Student();
 		
-		for(int i=0; i<n; i++) {
+		for(int i=0; i<n; i++) { 
 			doc.nextLine();
 			
 			a[i].hoten=doc.next();
