@@ -21,24 +21,24 @@ public class Main {
 		for(int i=0; i<n; i++) { 
 			doc.nextLine();
 			
-			a[i].hoten=doc.next();
-			a[i].tuoi=doc.nextInt();
-			a[i].diem=doc.nextInt();
+			a[i].name=doc.next();
+			a[i].age=doc.nextInt();
+			a[i].point=doc.nextInt();
 			
 		}
 		
-		for(int i=0; i<n; i++) System.out.println(a[i].hoten+" "+a[i].tuoi+" "+a[i].diem);
+		for(int i=0; i<n; i++) System.out.println(a[i].name+" "+a[i].age+" "+a[i].point);
 		
 		for(int i=0; i<n-1; i++) 
 			for(int j=i+1; j<n; j++)
-				if (a[i].diem>a[j].diem) {
+				if (a[i].point>a[j].point) {
 					tg=a[i]; a[i]=a[j]; a[j]=tg;
 				}
 				
 		System.out.println("Danh sach theo thu tu diem: ");
 		
 		for(int i=0; i<n; i++) {
-			System.out.println(a[i].hoten+" "+a[i].tuoi+" "+a[i].diem);
+			System.out.println(a[i].name+" "+a[i].age+" "+a[i].point);
 		}
 				
 	}

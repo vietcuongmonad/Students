@@ -1,5 +1,5 @@
 
 public class Student {
-	public String hoten;
-	public int tuoi,diem;
+	String name;
+	int age,point;
 }
